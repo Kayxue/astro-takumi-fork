@@ -3,6 +3,29 @@
 ## v2.0.3 (2026-08-04)
 
 - Update locks
+- chore: release v2.0.3
+- Update locks
+- git add .
+- build(deps-dev): bump the all-dependencies group with 2 updates (#160)
+- Merge pull request #148 from vikas5914/dependabot/npm_and_yarn/fast-uri-3.1.4
+- build(deps): bump the all-dependencies group with 3 updates (#157)
+- build(deps): bump the all-dependencies group with 4 updates (#156)
+- build(deps): bump the npm_and_yarn group across 2 directories with 1 update (#155)
+- build(deps): bump postcss from 8.5.15 to 8.5.24 (#154)
+- build(deps): bump the all-dependencies group with 4 updates (#153)
+- build(deps): bump the all-dependencies group with 4 updates (#152)
+- build(deps): bump the all-dependencies group with 2 updates (#151)
+- build(deps-dev): bump lint-staged in the all-dependencies group (#150)
+- build(deps): bump the npm_and_yarn group across 2 directories with 2 updates (#149)
+- build(deps): bump the npm_and_yarn group across 2 directories with 1 update (#147)
+- build(deps-dev): bump sharp from 0.34.5 to 0.35.3 (#146)
+- build(deps-dev): bump svgo from 4.0.1 to 4.0.2 (#145)
+- build(deps-dev): bump brace-expansion from 5.0.6 to 5.0.7 (#144)
+- build(deps): bump the all-dependencies group with 4 updates (#143)
+
+## v2.0.3 (2026-08-04)
+
+- Update locks
 - git add .
 - build(deps-dev): bump the all-dependencies group with 2 updates (#160)
 - Merge pull request #148 from vikas5914/dependabot/npm_and_yarn/fast-uri-3.1.4
