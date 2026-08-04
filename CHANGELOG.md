@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.5 (2026-08-04)
+
+- Upgrade dependabot settings
+
 ## v2.0.4 (2026-08-04)
 
 - Update info
