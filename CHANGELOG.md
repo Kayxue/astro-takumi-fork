@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.12 (2026-08-04)
+
+- GitHub Actions migration
+
+
 ## v2.0.11 (2026-08-04)
 
 - GitHub Actions migration
