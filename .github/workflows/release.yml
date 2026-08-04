@@ -111,7 +111,7 @@ jobs:
           git push origin master --tags
 
       - name: Publish to npm
-        run: bun publish --access public --ignore-scripts
+        run: bun publish --access public --ignore-scripts --verbose
         env:
           BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
