@@ -15,7 +15,6 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
-    "@eslint/js": "^10.0.1",
     "@fontsource/roboto": "^5.3.0",
     "@tsconfig/node20": "^20.1.9",
     "@tsconfig/strictest": "^2.0.8",
@@ -23,12 +22,12 @@
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "astro": "^7.1.6",
-    "eslint": "^10.8.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0",
+    "oxlint": "^1.77.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "prettier": "^3.9.6",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.66.0",
     "vitest": "^4.1.10"
   },
   "bugs": {
@@ -61,7 +60,7 @@
   ],
   "license": "GPL-3.0-only",
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{ts,tsx}": "oxlint --fix",
     "*": "prettier --ignore-unknown --write"
   },
   "prettier": {
@@ -69,7 +68,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "lint": "eslint src --cache",
+    "lint": "oxlint src",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "vitest",
