@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.6 (2026-08-04)
+
+- GitHub Actions migration
+- GitHub Actions migration
+- Migrate to oxlint
+- Husky upgrade
+
 ## v2.0.5 (2026-08-04)
 
 - Upgrade dependabot settings
