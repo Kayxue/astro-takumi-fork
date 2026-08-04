@@ -111,10 +111,9 @@ jobs:
           git push origin master --tags
 
       - name: Publish to npm
-        run: bun publish --access public
+        run: bun publish --access public --ignore-scripts
         env:
           BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          HUSKY: "0"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
