@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.4 (2026-08-04)
+
+- Update info
+
 ## v2.0.3 (2026-08-04)
 
 - Update locks
