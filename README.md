@@ -3,9 +3,9 @@
 
 [![astro-takumi](https://img.shields.io/npm/v/astro-takumi.svg)](https://www.npmjs.com/package/astro-takumi)
 
-Generate Open Graph images for your Astro site using Takumi.
+(Fork version) Generate Open Graph images for your Astro site using Takumi.
 
-This project is actively maintained. If you have a feature request or need help, please [create an issue](https://github.com/vikas5914/astro-takumi/issues/new).
+If you have a feature request or need help, please [create an issue](https://github.com/Kayxue/astro-takumi/issues/new).
 
 </div>
 
@@ -33,6 +33,7 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
 ## Quick Start
 
 1. Add this integration to your Astro config:
+
    - Option 1: use the `astro` command:
 
      ```bash
@@ -113,6 +114,7 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
 1. Update your main Astro layout with the appropriate `meta` tags. The [Open Graph site](https://ogp.me/) has more information possible tags.
 
    The following `meta` tags must be defined:
+
    - `og:title`
      - This field may be used when generating images.
    - `og:type`
@@ -124,6 +126,7 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
      - Optional. This field may be used when generating images.
 
    Your site will fail to build if the tags above are not set.
+
    - Option 1: Use the [`astro-seo`](https://github.com/jonasmerlin/astro-seo) package:
 
      Install the `astro-seo` package:
@@ -185,6 +188,7 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
 1. Build your site. You should see an image file (`.png` by default) next to each `.html` page in your `dist` folder. Double-check that the `og:image` property in your `.html` file matches the path to the image file.
 
 1. Deploy your site. You can verify that your images are correct by:
+
    - Sending a link to your site in an application that supports Open Graph like iMessage, Slack, Discord, etc.
    - Visit [opengraph.xyz](http://opengraph.xyz/) and test your site.
 

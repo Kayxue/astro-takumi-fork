@@ -3,9 +3,9 @@
 
 [![astro-takumi](https://img.shields.io/npm/v/astro-takumi.svg)](https://www.npmjs.com/package/astro-takumi)
 
-Generate Open Graph images for your Astro site using Takumi.
+(Fork version) Generate Open Graph images for your Astro site using Takumi.
 
-This project is actively maintained. If you have a feature request or need help, please [create an issue](https://github.com/vikas5914/astro-takumi/issues/new).
+If you have a feature request or need help, please [create an issue](https://github.com/Kayxue/astro-takumi/issues/new).
 
 </div>
 
@@ -203,21 +203,21 @@ astroTakumi({
     fonts: [
       fs.readFileSync("node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff"),
     ],
-    
+
     // Image dimensions (default: 1200x630)
     width: 1200,
     height: 630,
-    
+
     // Output format: "png" | "webp" | "jpeg" | "ico" | "raw" (default: "png")
     // WebP is recommended for better compression
     format: "webp",
-    
+
     // Image quality 0-100 for jpeg/lossy webp (default: 100)
     quality: 90,
-    
+
     // Enable debug borders to troubleshoot layouts (default: false)
     drawDebugBorder: false,
-    
+
     // Log each generated image (default: false)
     verbose: true,
 
@@ -312,4 +312,3 @@ export default defineConfig({
 ## Acknowledgment
 
 Based on the excellent work done in the [Takumi](https://github.com/kane50613/takumi) project and the [astro-opengraph-images](https://github.com/shepherdjerred/astro-opengraph-images) project.
-

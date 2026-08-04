@@ -2,24 +2,11 @@
 
 set -euo pipefail
 
-# Ensure required tools exist (macOS-friendly checks)
-for cmd in npx jq gomplate; do
-  if ! command -v "$cmd" >/dev/null 2>&1; then
-    echo "Error: '$cmd' is required but not installed." >&2
-    case "$cmd" in
-      jq)
-        echo "Install jq on macOS: brew install jq" >&2
-        ;;
-      gomplate)
-        echo "Install gomplate on macOS: brew install gomplate" >&2
-        ;;
-      npx)
-        echo "Install Node.js (which provides npx): brew install node" >&2
-        ;;
-    esac
-    exit 1
-  fi
-done
+# Ensure required tools exist
+if ! command -v npx >/dev/null 2>&1; then
+  echo "Error: 'npx' is required but not installed." >&2
+  exit 1
+fi
 
 # Recreate presets directory and generated examples
 mkdir -p assets/presets
@@ -27,10 +14,29 @@ rm -rf assets/presets/*
 
 npx tsx src/presets/renderExamples.ts
 
-# Build JSON array of filenames in assets/presets/
-# Use ls -1 for predictable, one-per-line output compatible with macOS 'ls'
-presets=$(ls -1 assets/presets/ 2>/dev/null | jq -R . | jq -s .)
-export presets
-
-# Render README via gomplate using the JSON list
-gomplate -f README.md.tmpl -d presets=env:///presets?type=application/json > README.md
+if command -v gomplate >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
+  presets=$(ls -1 assets/presets/ 2>/dev/null | jq -R . | jq -s .)
+  export presets
+  gomplate -f README.md.tmpl -d presets=env:///presets?type=application/json > README.md
+else
+  echo "gomplate/jq not found; using Node.js to render README.md..."
+  node -e '
+    const fs = require("fs");
+    const tmpl = fs.readFileSync("README.md.tmpl", "utf8");
+    const presets = fs.readdirSync("assets/presets").filter(f => f.endsWith(".png")).sort();
+    const rangeRegex = /\{\{\s*range\s+\$preset\s*:=\s*\(ds "presets"\)\s*-\}\}([\s\S]*?)\{\{\s*end\s*\}\}/;
+    const match = tmpl.match(rangeRegex);
+    if (match) {
+      const blockTmpl = match[1];
+      const rendered = presets.map(file => {
+        const name = file.replace(".png", "");
+        return blockTmpl
+          .replace(/\{\{\s*strings\.ReplaceAll "\.png" "" \$preset\s*\}\}/g, name)
+          .replace(/\{\{\s*\$preset\s*\}\}/g, file);
+      }).join("\n");
+      const output = tmpl.replace(rangeRegex, rendered.trimStart());
+      fs.writeFileSync("README.md", output, "utf8");
+    }
+  '
+fi
+echo "README.md successfully updated!"
