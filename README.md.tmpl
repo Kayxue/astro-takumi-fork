@@ -1,9 +1,9 @@
 <div align="center">
-  <h1>Astro Takumi</h1>
+  <h1>Astro Takumi (Fork Version)</h1>
 
 [![astro-takumi-fork](https://img.shields.io/npm/v/astro-takumi-fork.svg)](https://www.npmjs.com/package/astro-takumi-fork)
 
-(Fork version) Generate Open Graph images for your Astro site using Takumi.
+Generate Open Graph images for your Astro site using Takumi.
 
 If you have a feature request or need help, please [create an issue](https://github.com/Kayxue/astro-takumi-fork/issues/new).
 
