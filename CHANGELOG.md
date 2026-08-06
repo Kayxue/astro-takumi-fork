@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.13 (2026-08-06)
+
+- Change runner
+- Finish readme, upgrade commands
+- build(deps-dev): bump typescript from 6.0.3 to 7.0.2
+
+
 ## v2.0.12 (2026-08-04)
 
 - GitHub Actions migration
