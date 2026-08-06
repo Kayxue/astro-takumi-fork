@@ -8,6 +8,17 @@ if ! command -v npx >/dev/null 2>&1; then
   exit 1
 fi
 
+# Ensure preset example is built so dist/index.html exists
+if [ ! -f "examples/preset/dist/index.html" ]; then
+  echo "Building examples/preset..."
+  npm run build
+  if command -v bun >/dev/null 2>&1; then
+    bun run --cwd examples/preset build
+  else
+    npm run build --prefix examples/preset
+  fi
+fi
+
 # Recreate presets directory and generated examples
 mkdir -p assets/presets
 rm -rf assets/presets/*

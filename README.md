@@ -1,11 +1,11 @@
 <div align="center">
   <h1>Astro Takumi</h1>
 
-[![astro-takumi](https://img.shields.io/npm/v/astro-takumi.svg)](https://www.npmjs.com/package/astro-takumi)
+[![astro-takumi-fork](https://img.shields.io/npm/v/astro-takumi-fork.svg)](https://www.npmjs.com/package/astro-takumi-fork)
 
 (Fork version) Generate Open Graph images for your Astro site using Takumi.
 
-If you have a feature request or need help, please [create an issue](https://github.com/Kayxue/astro-takumi/issues/new).
+If you have a feature request or need help, please [create an issue](https://github.com/Kayxue/astro-takumi-fork/issues/new).
 
 </div>
 
@@ -37,17 +37,17 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
    - Option 1: use the `astro` command:
 
      ```bash
-     npx astro add astro-takumi
+     npx astro add astro-takumi-fork
      ```
 
    - Option 2: install the package and add the integration to your Astro config:
 
      ```bash
-     npm i astro-takumi
+     npm i astro-takumi-fork
      ```
 
      ```diff
-     +import astroTakumi from "astro-takumi";
+     +import astroTakumi from "astro-takumi-fork";
 
      export default defineConfig({
        integrations: [
@@ -73,8 +73,8 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
 1. Configure the integration in your Astro config:
 
    ```diff
-   -import astroTakumi from "astro-takumi";
-   +import astroTakumi, { presets } from "astro-takumi";
+   -import astroTakumi from "astro-takumi-fork";
+   +import astroTakumi, { presets } from "astro-takumi-fork";
 
    export default defineConfig({
      integrations: [
@@ -140,7 +140,7 @@ You've probably seen this in action when posting a link on Facebook, Twitter, Sl
      ```diff
      ---
      +import { SEO } from "astro-seo";
-     +import { getImagePath } from "astro-takumi";
+     +import { getImagePath } from "astro-takumi-fork";
 
      interface Props {
        title: string;
@@ -234,7 +234,7 @@ astroTakumi({
 For better performance, you can use WebP format which offers smaller file sizes:
 
 ```ts
-import astroTakumi, { presets, getImagePath } from "astro-takumi";
+import astroTakumi, { presets, getImagePath } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -290,7 +290,7 @@ All presets use Takumi's built-in Tailwind CSS support via the `tw` prop - no ad
 ### `backgroundImage`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -306,7 +306,7 @@ export default defineConfig({
 ### `blackAndWhite`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -322,7 +322,7 @@ export default defineConfig({
 ### `brandedLogo`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -338,7 +338,7 @@ export default defineConfig({
 ### `customProperty`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -354,7 +354,7 @@ export default defineConfig({
 ### `gradients`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -370,7 +370,7 @@ export default defineConfig({
 ### `podcast`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -386,7 +386,7 @@ export default defineConfig({
 ### `rauchg`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -402,7 +402,7 @@ export default defineConfig({
 ### `simpleBlog`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -418,7 +418,7 @@ export default defineConfig({
 ### `tailwind`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [
@@ -434,7 +434,7 @@ export default defineConfig({
 ### `waveSvg`
 
 ```diff
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 export default defineConfig({
   integrations: [

@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import * as fs from "node:fs";
-import astroTakumi, { presets } from "astro-takumi";
+import astroTakumi, { presets } from "astro-takumi-fork";
 
 // https://astro.build/config
 export default defineConfig({

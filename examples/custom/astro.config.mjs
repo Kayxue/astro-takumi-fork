@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import * as fs from "node:fs";
-import astroTakumi from "astro-takumi";
+import astroTakumi from "astro-takumi-fork";
 import { customOgMediaLayout } from "./src/customRenderer.ts";
 
 // https://astro.build/config

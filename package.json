@@ -7,21 +7,19 @@
   },
   "main": "dist/index.js",
   "dependencies": {
-    "@takumi-rs/core": "^2.5.6",
-    "@takumi-rs/helpers": "^2.5.6",
+    "@takumi-rs/core": "^2.5.10",
+    "@takumi-rs/helpers": "^2.5.10",
     "jsdom": "^30.0.1",
     "react": "^19.2.8"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
     "@fontsource/roboto": "^5.3.0",
     "@tsconfig/node20": "^20.1.9",
     "@tsconfig/strictest": "^2.0.8",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
-    "astro": "^7.1.6",
+    "astro": "^7.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0",
     "oxlint": "^1.77.0",
@@ -32,11 +30,6 @@
   },
   "bugs": {
     "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   },
   "description": "Generate Open Graph images for your Astro site using Takumi.",
   "files": [
@@ -72,9 +65,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "vitest",
-    "generate:presets": "mkdir -p assets/presets && npx tsx src/presets/renderExamples.ts",
+    "generate:presets": "mkdir -p assets/presets && bun run src/presets/renderExamples.ts",
     "generate:readme": "./generate_readme.sh",
-    "examples:build": "npm run build && npm run build --prefix examples/preset && npm run build --prefix examples/custom"
+    "examples:build": "bun run build && bun run build --prefix examples/preset && bun run build --prefix examples/custom"
   },
   "type": "module",
   "types": "dist/index.d.ts"
