@@ -21,7 +21,7 @@ jobs:
   release:
     # Skip version-bump commits pushed by this workflow
     if: "!startsWith(github.event.head_commit.message, 'chore: release')"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04-arm
     permissions:
       contents: write
       id-token: write
