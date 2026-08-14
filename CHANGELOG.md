@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.15 (2026-08-14)
+
+- Update dependencies
+
+
 ## v2.0.14 (2026-08-06)
 
 - Update readme
