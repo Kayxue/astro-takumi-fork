@@ -7,8 +7,9 @@
   },
   "main": "dist/index.js",
   "dependencies": {
-    "@takumi-rs/core": "^2.5.10",
-    "@takumi-rs/helpers": "^2.5.10",
+    "@takumi-rs/core": "^2.8.1",
+    "@takumi-rs/helpers": "^2.8.1",
+    "astro-takumi": ".",
     "jsdom": "^30.0.1",
     "react": "^19.2.8"
   },
@@ -17,12 +18,12 @@
     "@tsconfig/node20": "^20.1.9",
     "@tsconfig/strictest": "^2.0.8",
     "@types/jsdom": "^28.0.3",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.2.0",
     "@types/react": "^19.2.18",
-    "astro": "^7.2.0",
+    "astro": "^7.2.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.3.0",
-    "oxlint": "^1.77.0",
+    "oxlint": "^1.78.0",
     "oxlint-tsgolint": "^7.0.2001",
     "prettier": "^3.9.6",
     "typescript": "^7.0.2",
@@ -67,7 +68,7 @@
     "test": "vitest",
     "generate:presets": "mkdir -p assets/presets && bun run src/presets/renderExamples.ts",
     "generate:readme": "./generate_readme.sh",
-    "examples:build": "bun run build && bun run build --prefix examples/preset && bun run build --prefix examples/custom"
+    "examples:build": "bun run build && bun run build -p examples/preset && bun run build -p examples/custom"
   },
   "type": "module",
   "types": "dist/index.d.ts"

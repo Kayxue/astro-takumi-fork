@@ -10,7 +10,7 @@
     "astro": "bunx astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@fontsource/roboto": "^5.2.10",
     "astro": "^7.0.7",
     "astro-seo": "^1.1.0",

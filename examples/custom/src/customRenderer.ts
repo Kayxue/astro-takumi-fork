@@ -1,4 +1,4 @@
-import type { RenderFunctionInput } from "astro-takumi";
+import type { RenderFunctionInput } from "astro-takumi-fork";
 import React from "react";
 
 const outerStyle: React.CSSProperties = {
