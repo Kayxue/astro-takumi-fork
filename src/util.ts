@@ -6,10 +6,13 @@ import path from "path";
 // I don't fully understand how Astro decides this, so:
 export function getFilePath({ dir, page }: { dir: string; page: string }) {
   let target: string = path.join(dir, page, "index.html");
+  console.log(page);
 
   if (!fs.existsSync(target)) {
-    target = path.join(dir, page.slice(0, -1) + ".html");
+    target = path.join(dir, (page.endsWith("/") ? page.slice(0, -1) : page).concat(".html"));
   }
+
+  console.log(target);
 
   return target;
 }
