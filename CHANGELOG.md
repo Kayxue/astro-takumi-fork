@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.17 (2026-08-14)
+
+- Fix for issue #159 in origin repository
+- Fix for issue #161 in origin repository
+
+
 ## v2.0.16 (2026-08-14)
 
 - Update dependencies
