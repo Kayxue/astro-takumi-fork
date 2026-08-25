@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.18 (2026-08-25)
+
+- Update dependencies, migrate to bun monorepo test
+
+
 ## v2.0.17 (2026-08-14)
 
 - Fix for issue #159 in origin repository
