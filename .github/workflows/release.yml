@@ -57,7 +57,7 @@ jobs:
         id: version
         run: |
           BUMP="${{ github.event.inputs.bump || 'patch' }}"
-          CURRENT=$(jq -r '.version' package.json)
+          CURRENT=$(jq -r '.version' packages/astro-takumi-fork/package.json)
           IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
           case "$BUMP" in
             major) MAJOR=$((MAJOR + 1)); MINOR=0; PATCH=0 ;;
@@ -65,8 +65,8 @@ jobs:
             patch) PATCH=$((PATCH + 1)) ;;
           esac
           NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
-          jq --arg v "${MAJOR}.${MINOR}.${PATCH}" '.version = $v' package.json > package.tmp.json
-          mv package.tmp.json package.json
+          jq --arg v "${MAJOR}.${MINOR}.${PATCH}" '.version = $v' packages/astro-takumi-fork/package.json > packages/astro-takumi-fork/package.tmp.json
+          mv packages/astro-takumi-fork/package.tmp.json packages/astro-takumi-fork/package.json
           echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Update changelog
@@ -105,7 +105,7 @@ jobs:
 
       - name: Commit, tag, and push
         run: |
-          git add package.json bun.lock CHANGELOG.md
+          git add packages/astro-takumi-fork/package.json bun.lock CHANGELOG.md
           git commit -m "chore: release ${{ steps.version.outputs.version }}"
           git tag "${{ steps.version.outputs.version }}"
           git push origin master --tags
@@ -114,7 +114,7 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm
-        run: bun publish --access public --ignore-scripts
+        run: bun publish --cwd packages/astro-takumi-fork --access public --ignore-scripts
         env:
           BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,45 @@
+{
+  "name": "astro-takumi-fork",
+  "version": "2.0.17",
+  "description": "Generate Open Graph images for your Astro site using Takumi.",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kayxue/astro-takumi-fork.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
+  },
+  "homepage": "https://github.com/Kayxue/astro-takumi-fork",
+  "keywords": [
+    "takumi",
+    "astro-takumi",
+    "astro-integration",
+    "withastro",
+    "seo",
+    "ui",
+    "renderer"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "oxlint src"
+  },
+  "dependencies": {
+    "@takumi-rs/core": "^2.8.1",
+    "@takumi-rs/helpers": "^2.8.1",
+    "jsdom": "^30.0.1",
+    "react": "^19.2.8"
+  }
+}

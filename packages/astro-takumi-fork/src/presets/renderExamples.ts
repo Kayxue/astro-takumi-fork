@@ -13,7 +13,7 @@ import { fileURLToPath } from "url";
 // Run with `npx tsx src/presets/renderExamples.ts`
 async function renderExamples() {
   const pathname = "dist/index/";
-  const dir = new URL("../../examples/preset", import.meta.url);
+  const dir = new URL("../../../../examples/preset", import.meta.url);
 
   const htmlFile = getFilePath({ dir: fileURLToPath(dir), page: pathname });
   const html = (await fs.readFile(htmlFile)).toString();

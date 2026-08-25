@@ -2,28 +2,18 @@
 
 set -euo pipefail
 
-# Ensure required tools exist
-if ! command -v npx >/dev/null 2>&1; then
-  echo "Error: 'npx' is required but not installed." >&2
-  exit 1
-fi
-
 # Ensure preset example is built so dist/index.html exists
 if [ ! -f "examples/preset/dist/index.html" ]; then
   echo "Building examples/preset..."
-  npm run build
-  if command -v bun >/dev/null 2>&1; then
-    bun run --cwd examples/preset build
-  else
-    npm run build --prefix examples/preset
-  fi
+  bun run build
+  bun --cwd examples/preset build
 fi
 
 # Recreate presets directory and generated examples
 mkdir -p assets/presets
 rm -rf assets/presets/*
 
-npx tsx src/presets/renderExamples.ts
+bun run packages/astro-takumi-fork/src/presets/renderExamples.ts
 
 if command -v gomplate >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
   presets=$(ls -1 assets/presets/ 2>/dev/null | jq -R . | jq -s .)

@@ -1,75 +1,51 @@
 {
-  "name": "astro-takumi-fork",
-  "version": "2.0.17",
+  "name": "astro-takumi-fork-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kayxue/astro-takumi-fork.git"
   },
-  "main": "dist/index.js",
-  "dependencies": {
-    "@takumi-rs/core": "^2.8.1",
-    "@takumi-rs/helpers": "^2.8.1",
-    "astro-takumi": ".",
-    "jsdom": "^30.0.1",
-    "react": "^19.2.8"
-  },
-  "devDependencies": {
-    "@fontsource/roboto": "^5.3.0",
-    "@tsconfig/node20": "^20.1.9",
-    "@tsconfig/strictest": "^2.0.8",
-    "@types/jsdom": "^30.0.0",
-    "@types/node": "^26.2.0",
-    "@types/react": "^19.2.18",
-    "astro": "^7.2.2",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.3.0",
-    "oxlint": "^1.78.0",
-    "oxlint-tsgolint": "^7.0.2001",
-    "prettier": "^3.9.6",
-    "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
-  },
   "bugs": {
     "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
   },
-  "description": "Generate Open Graph images for your Astro site using Takumi.",
-  "files": [
-    "dist",
-    "src",
-    "package.json",
-    "README.md",
-    "LICENSE",
-    "package-lock.json",
-    "CHANGELOG.md"
-  ],
   "homepage": "https://github.com/Kayxue/astro-takumi-fork",
-  "keywords": [
-    "takumi",
-    "astro-takumi",
-    "astro-integration",
-    "withastro",
-    "seo",
-    "ui",
-    "renderer"
-  ],
   "license": "GPL-3.0-only",
+  "scripts": {
+    "prepare": "husky",
+    "lint": "oxlint packages/astro-takumi-fork/src",
+    "build": "bun --filter './packages/*' build",
+    "watch": "bun --filter './packages/*' watch",
+    "test": "vitest",
+    "generate:presets": "mkdir -p assets/presets && bun run packages/astro-takumi-fork/src/presets/renderExamples.ts",
+    "generate:readme": "./generate_readme.sh",
+    "examples:build": "bun --filter './packages/*' build && bun --filter './examples/*' build"
+  },
+  "devDependencies": {
+    "@fontsource/roboto": "^5.3.0",
+    "@tsconfig/node20": "^20.1.10",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "astro": "^7.2.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "oxlint": "^1.80.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11"
+  },
   "lint-staged": {
     "*.{ts,tsx}": "oxlint --fix",
     "*": "prettier --ignore-unknown --write"
   },
   "prettier": {
     "printWidth": 120
-  },
-  "scripts": {
-    "prepare": "husky",
-    "lint": "oxlint src",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "vitest",
-    "generate:presets": "mkdir -p assets/presets && bun run src/presets/renderExamples.ts",
-    "generate:readme": "./generate_readme.sh",
-    "examples:build": "bun run build && bun run build -p examples/preset && bun run build -p examples/custom"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts"
+  }
 }
