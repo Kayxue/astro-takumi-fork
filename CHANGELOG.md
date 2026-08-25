@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.19 (2026-08-25)
+
+- Update @takumi-rs to 2.12.0, migrate to bun monorepo
+
+
 ## v2.0.18 (2026-08-25)
 
 - Update dependencies, migrate to bun monorepo test
