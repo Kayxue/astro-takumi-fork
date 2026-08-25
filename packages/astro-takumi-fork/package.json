@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@takumi-rs/core": "^2.8.1",
-    "@takumi-rs/helpers": "^2.8.1",
+    "@takumi-rs/helpers": "^2.10.0",
     "jsdom": "^30.0.1",
     "react": "^19.2.8"
   }
