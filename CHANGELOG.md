@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.20 (2026-08-31)
+
+- README.md fix for npm
+
+
 ## v2.0.19 (2026-08-25)
 
 - Update @takumi-rs to 2.12.0, migrate to bun monorepo
