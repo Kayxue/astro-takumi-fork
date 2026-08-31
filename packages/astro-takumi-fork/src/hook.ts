@@ -55,7 +55,7 @@ async function handlePage({ page, options, render, dir, logger, renderer, fetchC
 
   // render the image using Takumi
   const reactNode = await render({ ...page, ...pageDetails, dir, document });
-  const { node, stylesheets } = await fromJsx(reactNode);
+  const { node, css } = await fromJsx(reactNode);
   const images = await prepareImages({
     node,
     ...(options.images ? { sources: options.images } : {}),
@@ -73,7 +73,7 @@ async function handlePage({ page, options, render, dir, logger, renderer, fetchC
     height: options.height,
     ...formatOptions,
     drawDebugBorder: options.drawDebugBorder,
-    stylesheets,
+    css,
     images,
     ...(options.fonts ? { fonts: options.fonts } : {}),
     ...(options.fontFamilies ? { fontFamilies: options.fontFamilies } : {}),
