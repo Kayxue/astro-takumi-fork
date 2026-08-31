@@ -34,7 +34,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "lint": "oxlint src"
+    "lint": "oxlint src",
+    "prepublishOnly": "cp ../../README.md ./README.md"
   },
   "dependencies": {
     "@takumi-rs/core": "^2.12.0",
