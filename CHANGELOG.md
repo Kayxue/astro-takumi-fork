@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.22 (2026-08-31)
+
+- Update takumi version
+
+
 ## v2.0.21 (2026-08-31)
 
 - try fixing no readme
