@@ -113,6 +113,9 @@ jobs:
       - name: Setup npm authentication
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
+      - name: Prepare package (prepublishOnly)
+        run: cp README.md packages/astro-takumi-fork/README.md
+
       - name: Publish to npm
         run: bun publish --cwd packages/astro-takumi-fork --access public --ignore-scripts
         env:
