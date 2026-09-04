@@ -32,7 +32,7 @@
     "@types/jsdom": "^30.0.0",
     "@types/node": "^26.4.0",
     "@types/react": "^19.2.18",
-    "astro": "^7.2.9",
+    "astro": "^7.2.10",
     "husky": "^9.1.7",
     "lint-staged": "^17.4.1",
     "oxlint": "^1.80.0",
