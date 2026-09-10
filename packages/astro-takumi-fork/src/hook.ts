@@ -87,11 +87,12 @@ async function handlePage({ page, options, render, dir, logger, renderer, fetchC
   // path.relative() returns the relative path from the first argument to the second argument.
   const relativeImageFile = path.relative(fileURLToPath(dir), imageFile).replace(/\\/g, "/");
 
-  // convert the image path to a URL and remove the leading slash
-  const imageUrl = new URL(pageDetails.image).pathname.slice(1);
+  // the og:image URL is percent-encoded (e.g. spaces become %20), while the generated
+  // image file path on disk is not, so decode it before comparing
+  const imageUrl = decodeURIComponent(new URL(pageDetails.image).pathname).slice(1);
 
   // check that the og:image property matches the sitePath
-  if (decodeURIComponent(imageUrl) !== relativeImageFile) {
+  if (imageUrl !== relativeImageFile) {
     throw new Error(
       `The og:image property in ${htmlFile} (${imageUrl}) does not match the generated image (${relativeImageFile}).`,
     );

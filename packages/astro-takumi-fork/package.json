@@ -38,9 +38,9 @@
     "prepublishOnly": "cp ../../README.md ./README.md"
   },
   "dependencies": {
-    "@takumi-rs/core": "^2.13.3",
-    "@takumi-rs/helpers": "^2.13.3",
+    "@takumi-rs/core": "^2.13.7",
+    "@takumi-rs/helpers": "^2.13.7",
     "jsdom": "^30.0.1",
-    "react": "^19.2.8"
+    "react": "^19.3.0"
   }
 }

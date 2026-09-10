@@ -58,10 +58,12 @@ test("getFilePath blog", async () => {
 
 // Astro build.format: 'file' + trailingSlash: 'never' → pathnames without a
 // trailing slash (e.g. "docs/getting-started"), HTML at docs/getting-started.html.
-// Current getFilePath uses page.slice(0, -1), which drops a real character when
-// there is no trailing slash ("getting-starte.html") and the build fails with ENOENT.
+// getFilePath must not mangle the last path character (previously "getting-starte.html")
+// https://github.com/vikas5914/astro-takumi/issues/159
 test("getFilePath file format nested page without trailing slash", async () => {
   const tmpDir = await createTempDir();
+
+  // change the current working directory to the temp dir
   process.chdir(tmpDir);
 
   await mkdir(join(tmpDir, "docs"));
@@ -69,6 +71,7 @@ test("getFilePath file format nested page without trailing slash", async () => {
 
   const result = getFilePath({ dir: "", page: "docs/getting-started" });
 
+  // change the current working directory back to the original
   process.chdir(__dirname);
 
   expect(normalize(result)).toBe(normalize("docs/getting-started.html"));
@@ -76,12 +79,15 @@ test("getFilePath file format nested page without trailing slash", async () => {
 
 test("getFilePath file format root index without trailing slash", async () => {
   const tmpDir = await createTempDir();
+
+  // change the current working directory to the temp dir
   process.chdir(tmpDir);
 
   await writeFile(join(tmpDir, "index.html"), "");
 
   const result = getFilePath({ dir: "", page: "" });
 
+  // change the current working directory back to the original
   process.chdir(__dirname);
 
   expect(normalize(result)).toBe(normalize("index.html"));
