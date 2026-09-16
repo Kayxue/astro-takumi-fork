@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.27 (2026-09-16)
+
+- Upgrade vitest to 5.0
+
+
 ## v2.0.26 (2026-09-16)
 
 - Try to fix oxfmt problem
