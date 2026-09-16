@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.26 (2026-09-16)
+
+- Try to fix oxfmt problem
+- Commit test
+
+
 ## v2.0.25 (2026-09-16)
 
 - Fix broken link in readme
