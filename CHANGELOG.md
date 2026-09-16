@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.25 (2026-09-16)
+
+- Fix broken link in readme
+- Fix broken link in readme
+
+
 ## v2.0.24 (2026-09-16)
 
 - Update takumi version
