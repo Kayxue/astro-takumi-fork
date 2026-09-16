@@ -5,7 +5,6 @@
 - Update takumi version
 - Update takumi version
 
-
 ## v2.0.23 (2026-09-10)
 
 - Align the fixes with original repo
