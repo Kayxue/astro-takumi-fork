@@ -2,7 +2,10 @@ import type { RenderFunctionInput } from "../types.js";
 
 // This preset demonstrates how to extract arbitrary content from an HTML file
 // and render it in an Open Graph image.
-export async function customProperty({ title, document }: RenderFunctionInput): Promise<React.ReactNode> {
+export async function customProperty({
+  title,
+  document,
+}: RenderFunctionInput): Promise<React.ReactNode> {
   // extract the body
   const body = document.querySelector("body")?.textContent ?? "";
   // replace newlines with spaces, trim, then truncate to 50 characters, add ellipsis if truncated

@@ -31,7 +31,9 @@ async function renderExamples() {
   };
 
   const renderer = new Renderer();
-  const fonts = [await fs.readFile("node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff")];
+  const fonts = [
+    await fs.readFile("node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff"),
+  ];
   const fetchCache = new Map<string, Promise<ArrayBuffer>>();
 
   const promises = Object.entries(presets).map(async ([name, preset]) => {

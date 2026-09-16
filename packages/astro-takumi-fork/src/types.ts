@@ -43,7 +43,8 @@ export type PartialIntegrationOptions = {
  * The options that we use internally. This ensures that all options are configured, either with something
  * the user provided or with a default value.
  */
-export type IntegrationOptions = Omit<PartialIntegrationOptions, keyof IntegrationDefaults> & IntegrationDefaults;
+export type IntegrationOptions = Omit<PartialIntegrationOptions, keyof IntegrationDefaults> &
+  IntegrationDefaults;
 
 /** This is the page data passed in by Astro */
 export interface Page {

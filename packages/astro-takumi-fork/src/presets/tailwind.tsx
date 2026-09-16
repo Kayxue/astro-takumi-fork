@@ -1,6 +1,9 @@
 import type { RenderFunctionInput } from "../types.js";
 
-export async function tailwind({ title, description }: RenderFunctionInput): Promise<React.ReactNode> {
+export async function tailwind({
+  title,
+  description,
+}: RenderFunctionInput): Promise<React.ReactNode> {
   return Promise.resolve(
     // Based on Tailwind UI CTA; avoids responsive variants for compatibility
     <div tw="flex flex-col w-full h-full items-center justify-center bg-white">

@@ -41,7 +41,11 @@ export function customOgMediaLayout({ title }: RenderFunctionInput): Promise<Rea
       React.createElement(
         "div",
         { style: rowStyle },
-        React.createElement("div", { style: contentStyle }, React.createElement("h1", { style: headingStyle }, title)),
+        React.createElement(
+          "div",
+          { style: contentStyle },
+          React.createElement("h1", { style: headingStyle }, title),
+        ),
       ),
     ),
   );

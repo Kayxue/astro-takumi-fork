@@ -1,5 +1,10 @@
 import type { AstroIntegration } from "astro";
-import type { AstroBuildDoneHookInput, IntegrationDefaults, IntegrationInput, IntegrationOptions } from "./types.js";
+import type {
+  AstroBuildDoneHookInput,
+  IntegrationDefaults,
+  IntegrationInput,
+  IntegrationOptions,
+} from "./types.js";
 import { buildDoneHook } from "./hook.js";
 
 const defaults: IntegrationDefaults = {

@@ -29,7 +29,11 @@ export async function podcast({ title }: RenderFunctionInput): Promise<React.Rea
               ></path>
             </g>
           </svg>
-          <img tw="mx-auto w-[300px] h-[300px] rounded-full" style={{ objectFit: "cover" }} src={image} />
+          <img
+            tw="mx-auto w-[300px] h-[300px] rounded-full"
+            style={{ objectFit: "cover" }}
+            src={image}
+          />
         </div>
       </div>
     </div>,

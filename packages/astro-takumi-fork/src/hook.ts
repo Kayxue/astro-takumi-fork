@@ -26,7 +26,9 @@ export async function buildDoneHook({
   const renderer = new Renderer();
   // Share a byte cache across pages so remote assets are only fetched once.
   const fetchCache = new Map<string, Promise<ArrayBuffer>>();
-  const promises = pages.map((page) => handlePage({ page, options, render, dir, logger, renderer, fetchCache }));
+  const promises = pages.map((page) =>
+    handlePage({ page, options, render, dir, logger, renderer, fetchCache }),
+  );
   await Promise.all(promises);
 }
 
@@ -40,7 +42,15 @@ interface HandlePageInput {
   fetchCache: Map<string, Promise<ArrayBuffer>>;
 }
 
-async function handlePage({ page, options, render, dir, logger, renderer, fetchCache }: HandlePageInput) {
+async function handlePage({
+  page,
+  options,
+  render,
+  dir,
+  logger,
+  renderer,
+  fetchCache,
+}: HandlePageInput) {
   // gets the absolute path to the HTML file. E.g. /home/user/project/dist/blog/index.html
   // fileURLToPath() converts the URL to a file path. Without it, the path would start with a leading slash on Windows
   // systems, resulting in an invalid path.

@@ -5,52 +5,42 @@
 - Align the fixes with original repo
 - Align the fixes with original repo
 
-
 ## v2.0.22 (2026-08-31)
 
 - Update takumi version
-
 
 ## v2.0.21 (2026-08-31)
 
 - try fixing no readme
 
-
 ## v2.0.20 (2026-08-31)
 
 - README.md fix for npm
-
 
 ## v2.0.19 (2026-08-25)
 
 - Update @takumi-rs to 2.12.0, migrate to bun monorepo
 
-
 ## v2.0.18 (2026-08-25)
 
 - Update dependencies, migrate to bun monorepo test
-
 
 ## v2.0.17 (2026-08-14)
 
 - Fix for issue #159 in origin repository
 - Fix for issue #161 in origin repository
 
-
 ## v2.0.16 (2026-08-14)
 
 - Update dependencies
-
 
 ## v2.0.15 (2026-08-14)
 
 - Update dependencies
 
-
 ## v2.0.14 (2026-08-06)
 
 - Update readme
-
 
 ## v2.0.13 (2026-08-06)
 
@@ -58,36 +48,29 @@
 - Finish readme, upgrade commands
 - build(deps-dev): bump typescript from 6.0.3 to 7.0.2
 
-
 ## v2.0.12 (2026-08-04)
 
 - GitHub Actions migration
-
 
 ## v2.0.11 (2026-08-04)
 
 - GitHub Actions migration
 
-
 ## v2.0.10 (2026-08-04)
 
 - GitHub Actions migration
-
 
 ## v2.0.9 (2026-08-04)
 
 - GitHub Actions migration
 
-
 ## v2.0.8 (2026-08-04)
 
 - GitHub Actions migration
 
-
 ## v2.0.7 (2026-08-04)
 
 - GitHub Actions migration
-
 
 ## v2.0.6 (2026-08-04)
 

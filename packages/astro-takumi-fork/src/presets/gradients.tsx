@@ -1,6 +1,9 @@
 import type { RenderFunctionInput } from "../types.js";
 
-export async function gradients({ title, description }: RenderFunctionInput): Promise<React.ReactNode> {
+export async function gradients({
+  title,
+  description,
+}: RenderFunctionInput): Promise<React.ReactNode> {
   return Promise.resolve(
     <div
       style={{

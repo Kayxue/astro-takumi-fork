@@ -12,9 +12,21 @@ export async function brandedLogo({ title }: RenderFunctionInput): Promise<React
       <div tw="flex items-start justify-start h-full">
         <div tw="flex flex-col justify-between w-full h-full p-20">
           <div tw="flex items-center" style={{ gap: 16 }}>
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <rect x="2" y="2" width="44" height="44" rx="12" fill="white" fillOpacity="0.12" />
-              <path d="M24 10L36 32H12L24 10Z" stroke="white" strokeWidth="2.5" strokeLinejoin="round" fill="none" />
+              <path
+                d="M24 10L36 32H12L24 10Z"
+                stroke="white"
+                strokeWidth="2.5"
+                strokeLinejoin="round"
+                fill="none"
+              />
               <circle cx="24" cy="26" r="4" fill="white" />
             </svg>
             <div tw="text-white text-[36px] font-bold tracking-tight">Your Brand</div>

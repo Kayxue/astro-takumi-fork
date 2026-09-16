@@ -1,7 +1,10 @@
 import type { RenderFunctionInput } from "../types.js";
 
 // from https://fullstackheroes.com/resources/vercel-og-templates/simple/
-export async function simpleBlog({ title, description }: RenderFunctionInput): Promise<React.ReactNode> {
+export async function simpleBlog({
+  title,
+  description,
+}: RenderFunctionInput): Promise<React.ReactNode> {
   return Promise.resolve(
     <div tw="h-full w-full flex items-start justify-start border border-blue-500 border-[12px] bg-gray-50">
       <div tw="flex items-start justify-start h-full">

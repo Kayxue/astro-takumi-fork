@@ -11,7 +11,9 @@ export function sanitizeHtml(html: string): string {
 
 export function extract(document: Document): PageDetails {
   const title = document.querySelector("meta[property='og:title']")?.getAttribute("content");
-  const description = document.querySelector("meta[property='og:description']")?.getAttribute("content");
+  const description = document
+    .querySelector("meta[property='og:description']")
+    ?.getAttribute("content");
   const url = document.querySelector("meta[property='og:url']")?.getAttribute("content");
   const type = document.querySelector("meta[property='og:type']")?.getAttribute("content");
   const image = document.querySelector("meta[property='og:image']")?.getAttribute("content");
