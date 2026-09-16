@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.24 (2026-09-16)
+
+- Update takumi version
+- Update takumi version
+
+
 ## v2.0.23 (2026-09-10)
 
 - Align the fixes with original repo

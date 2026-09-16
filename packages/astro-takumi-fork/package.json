@@ -1,6 +1,6 @@
 {
   "name": "astro-takumi-fork",
-  "version": "2.0.23",
+  "version": "2.0.24",
   "description": "Generate Open Graph images for your Astro site using Takumi.",
   "keywords": [
     "astro-integration",
