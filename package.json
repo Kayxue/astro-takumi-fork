@@ -43,7 +43,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": "oxlint --fix",
-    "*": "oxfmt --write ."
+    "*": "oxfmt --write"
   },
   "prettier": {
     "printWidth": 120
