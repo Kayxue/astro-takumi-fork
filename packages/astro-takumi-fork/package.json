@@ -2,27 +2,24 @@
   "name": "astro-takumi-fork",
   "version": "2.0.23",
   "description": "Generate Open Graph images for your Astro site using Takumi.",
+  "keywords": [
+    "astro-integration",
+    "astro-takumi",
+    "renderer",
+    "seo",
+    "takumi",
+    "ui",
+    "withastro"
+  ],
+  "homepage": "https://github.com/Kayxue/astro-takumi-fork",
+  "bugs": {
+    "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
+  },
   "license": "GPL-3.0-only",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kayxue/astro-takumi-fork.git"
   },
-  "bugs": {
-    "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
-  },
-  "homepage": "https://github.com/Kayxue/astro-takumi-fork",
-  "keywords": [
-    "takumi",
-    "astro-takumi",
-    "astro-integration",
-    "withastro",
-    "seo",
-    "ui",
-    "renderer"
-  ],
   "files": [
     "dist",
     "src",
@@ -31,6 +28,9 @@
     "LICENSE",
     "CHANGELOG.md"
   ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -38,8 +38,8 @@
     "prepublishOnly": "cp ../../README.md ./README.md"
   },
   "dependencies": {
-    "@takumi-rs/core": "^2.13.7",
-    "@takumi-rs/helpers": "^2.13.7",
+    "@takumi-rs/core": "^2.14.0",
+    "@takumi-rs/helpers": "^2.14.0",
     "jsdom": "^30.0.1",
     "react": "^19.3.0"
   }

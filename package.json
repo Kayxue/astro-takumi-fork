@@ -1,20 +1,20 @@
 {
   "name": "astro-takumi-fork-monorepo",
   "private": true,
-  "type": "module",
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
+  "homepage": "https://github.com/Kayxue/astro-takumi-fork",
+  "bugs": {
+    "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
+  },
+  "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kayxue/astro-takumi-fork.git"
   },
-  "bugs": {
-    "url": "https://github.com/Kayxue/astro-takumi-fork/issues"
-  },
-  "homepage": "https://github.com/Kayxue/astro-takumi-fork",
-  "license": "GPL-3.0-only",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "type": "module",
   "scripts": {
     "prepare": "husky",
     "lint": "oxlint packages/astro-takumi-fork/src",
@@ -30,20 +30,20 @@
     "@tsconfig/node20": "^20.1.10",
     "@tsconfig/strictest": "^2.0.8",
     "@types/jsdom": "^30.0.0",
-    "@types/node": "^26.5.1",
+    "@types/node": "^26.6.1",
     "@types/react": "^19.3.0",
     "astro": "^7.3.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.5.0",
-    "oxlint": "^1.82.0",
+    "lint-staged": "^17.5.1",
+    "oxfmt": "^0.68.0",
+    "oxlint": "^1.83.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "prettier": "^3.9.6",
     "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   },
   "lint-staged": {
     "*.{ts,tsx}": "oxlint --fix",
-    "*": "prettier --ignore-unknown --write"
+    "*": "oxfmt --write ."
   },
   "prettier": {
     "printWidth": 120
