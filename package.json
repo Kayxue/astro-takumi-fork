@@ -30,7 +30,7 @@
     "@tsconfig/node20": "^20.1.10",
     "@tsconfig/strictest": "^2.0.8",
     "@types/jsdom": "^30.0.0",
-    "@types/node": "^26.6.1",
+    "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "astro": "^7.3.2",
     "husky": "^9.1.7",
