@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.28 (2026-10-14)
+
+- Upgrade dependencies
+
+
 ## v2.0.27 (2026-09-16)
 
 - Upgrade vitest to 5.0
