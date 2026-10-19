@@ -49,10 +49,10 @@
     },
     "packages/astro-takumi-fork": {
       "name": "astro-takumi-fork",
-      "version": "2.0.27",
+      "version": "2.0.29",
       "dependencies": {
         "@takumi-rs/core": "^2.16.1",
-        "@takumi-rs/helpers": "^2.16.1",
+        "@takumi-rs/helpers": "^2.16.2",
         "jsdom": "^30.1.2",
         "react": "^19.3.0",
       },
@@ -397,7 +397,7 @@
 
     "@takumi-rs/core-win32-x64-msvc": ["@takumi-rs/core-win32-x64-msvc@2.16.1", "", { "os": "win32", "cpu": "x64" }, "sha512-A/ciqDKk9dD1LbotG2e93TkiM4HfXMT6DR7yw8nt0KNFgN7iw44re7tTUfWWWrcd57ffcK+BNuXhey6Yk1Zcbg=="],
 
-    "@takumi-rs/helpers": ["@takumi-rs/helpers@2.16.1", "", { "peerDependencies": { "preact": "^10.0.0 || ^11.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["preact", "react"] }, "sha512-AB/VXPluMCTsa4xt3jw79wWhBhrY9qXIkcq10Nne6/pGapHHGDSn6wOE2MIJ8a+it9vpxwYCYVevpPqwGQZR0g=="],
+    "@takumi-rs/helpers": ["@takumi-rs/helpers@2.16.2", "", { "peerDependencies": { "preact": "^10.0.0 || ^11.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["preact", "react"] }, "sha512-GmVDykCVTWhN7hVXO5eVhFvLkzX7HrAp/a5xMGX/IJjblR7Hxb5TP0OqwmtZUIkoRLhtjIl6Mlchag0NuBJGBw=="],
 
     "@tsconfig/node20": ["@tsconfig/node20@20.1.10", "", {}, "sha512-5OZgdnxbFuvwm05iVwPXMU5/7iPuVDDZzAnxPDLj+kjN7fwQZSSVgHQhKTNkBPOO6Qef2D5MxPAoPLCGqE2VuQ=="],
 
@@ -938,6 +938,8 @@
     "@bruits/satteri-wasm32-wasi/@emnapi/runtime": ["@emnapi/runtime@1.11.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-vgj7R3y3Wgx24IQaGPA/R6YFXLHVMOZ0uVEyIQPaWs+rd1AzfEMXlAC22FYwO1XkKR6NPsq7mUandH8oIRdZFw=="],
 
     "@bruits/satteri-wasm32-wasi/@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.2.5", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" }, "peerDependencies": { "@emnapi/core": "^1.7.1 || ^2.0.0-alpha.4", "@emnapi/runtime": "^1.7.1 || ^2.0.0-alpha.4" } }, "sha512-HshSvXzmBxNzqejd3k/KemgQ3hdREUYFRRrgxOZ+gPljDIsO2SDZrVZMd4Z/HsxudQbE62OVyVFE8z9BCurfjA=="],
+
+    "@takumi-rs/core/@takumi-rs/helpers": ["@takumi-rs/helpers@2.16.1", "", { "peerDependencies": { "preact": "^10.0.0 || ^11.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["preact", "react"] }, "sha512-AB/VXPluMCTsa4xt3jw79wWhBhrY9qXIkcq10Nne6/pGapHHGDSn6wOE2MIJ8a+it9vpxwYCYVevpPqwGQZR0g=="],
 
     "@types/node/undici-types": ["undici-types@8.9.0", "", {}, "sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg=="],
 
