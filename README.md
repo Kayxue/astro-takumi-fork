@@ -12,6 +12,7 @@ If you have a feature request or need help, please [create an issue](https://git
 ## Bug Fixes and Updates
 
 - Updated the Takumi version to 2.20.0
+- Updated the jsdom version to 31.0.0
 - ~~Resolved issue [#161](https://github.com/vikas5914/astro-takumi/issues/161) and [#159](https://github.com/vikas5914/astro-takumi/issues/159)~~ Original version also fixed these issues as well
 
 ## What is Open Graph?
