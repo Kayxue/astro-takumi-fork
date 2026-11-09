@@ -1,5 +1,4 @@
 import { Renderer } from "@takumi-rs/core";
-import { prepareImages } from "@takumi-rs/helpers";
 import { fromJsx } from "@takumi-rs/helpers/jsx";
 import { presets } from "./index.js";
 import * as fs from "fs/promises";
@@ -39,14 +38,15 @@ async function renderExamples() {
   const promises = Object.entries(presets).map(async ([name, preset]) => {
     const reactNode = await preset(page);
     const { node, css } = await fromJsx(reactNode);
-    const images = await prepareImages({ node, fetchCache });
-    const png = await renderer.render(node, {
+    const prepared = await renderer.prepare(node, {
       width: 1200,
       height: 630,
-      format: "png",
+      images: { fetchCache },
       css,
       fonts,
-      images,
+    });
+    const png = await renderer.render(prepared, {
+      format: "png",
     });
     const target = `assets/presets/${name}.png`;
     await fs.writeFile(target, png);

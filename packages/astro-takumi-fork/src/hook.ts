@@ -1,5 +1,4 @@
 import { Renderer } from "@takumi-rs/core";
-import { prepareImages } from "@takumi-rs/helpers";
 import { fromJsx } from "@takumi-rs/helpers/jsx";
 import type { AstroBuildDoneHookInput, IntegrationOptions, Page, RenderFunction } from "./types.js";
 import * as fs from "fs/promises";
@@ -66,10 +65,16 @@ async function handlePage({
   // render the image using Takumi
   const reactNode = await render({ ...page, ...pageDetails, dir, document });
   const { node, css } = await fromJsx(reactNode);
-  const images = await prepareImages({
-    node,
-    ...(options.images ? { sources: options.images } : {}),
-    fetchCache,
+  const prepared = await renderer.prepare(node, {
+    width: options.width,
+    height: options.height,
+    images: {
+      ...(options.images ? { sources: options.images } : {}),
+      fetchCache,
+    },
+    css,
+    ...(options.fonts ? { fonts: options.fonts } : {}),
+    ...(options.fontFamilies ? { fontFamilies: options.fontFamilies } : {}),
   });
 
   // quality is only valid for jpeg / lossy webp in Takumi 2's format union
@@ -78,15 +83,9 @@ async function handlePage({
       ? ({ format: options.format, quality: options.quality } as const)
       : ({ format: options.format } as const);
 
-  const imageBuffer = await renderer.render(node, {
-    width: options.width,
-    height: options.height,
+  const imageBuffer = await renderer.render(prepared, {
     ...formatOptions,
     drawDebugBorder: options.drawDebugBorder,
-    css,
-    images,
-    ...(options.fonts ? { fonts: options.fonts } : {}),
-    ...(options.fontFamilies ? { fontFamilies: options.fontFamilies } : {}),
   });
 
   // save the image file. The file name is the same as the HTML file, but with the appropriate extension.

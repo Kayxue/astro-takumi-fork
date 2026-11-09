@@ -10,12 +10,12 @@
     "astro": "bunx astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "@fontsource/roboto": "^5.3.0",
-    "astro": "^7.3.8",
+    "astro": "^7.4.7",
     "astro-seo": "^1.2.0",
     "astro-takumi-fork": "workspace:*",
-    "react": "^19.3.0",
+    "react": "^19.3.1",
     "typescript": "^6.0.3"
   },
   "overrides": {
