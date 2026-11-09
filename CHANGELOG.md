@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.34 (2026-11-09)
+
+- Update dependencies
+
+
 ## v2.0.33 (2026-11-09)
 
 - Remove unneeded line
