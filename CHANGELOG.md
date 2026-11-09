@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.31 (2026-11-09)
+
+- Fix publish error
+
+
 ## v2.0.30 (2026-11-09)
 
 - Upgrade takumi
