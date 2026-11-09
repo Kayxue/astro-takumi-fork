@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.33 (2026-11-09)
+
+- Remove unneeded line
+
+
 ## v2.0.32 (2026-11-09)
 
 - Force update
