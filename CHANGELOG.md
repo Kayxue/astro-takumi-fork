@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.30 (2026-11-09)
+
+- Upgrade takumi
+
+
 ## v2.0.29 (2026-10-14)
 
 - Update readme
