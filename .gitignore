@@ -3,3 +3,4 @@ dist
 .eslintcache
 *.afphoto~lock~
 .DS_Store
+.zzz
