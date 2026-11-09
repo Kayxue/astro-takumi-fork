@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.32 (2026-11-09)
+
+- Force update
+- chore: release v2.0.31
+- Fix publish error
+
+
 ## v2.0.31 (2026-11-09)
 
 - Fix publish error
